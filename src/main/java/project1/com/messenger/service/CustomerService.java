@@ -3,6 +3,7 @@ package project1.com.messenger.service;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -84,5 +85,12 @@ public class CustomerService {
 		    hashtext = "0" + hashtext;
 		  }
 		  return hashtext;
+	}
+	public int setDateToInt() {
+		return (int)(new Date().getTime()/1000);
+	}
+	
+	public Date setIntToDate(int date) {
+		return new Date(((long)date)*1000);
 	}
 }

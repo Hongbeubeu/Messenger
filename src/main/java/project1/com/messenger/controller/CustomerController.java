@@ -1,5 +1,7 @@
 package project1.com.messenger.controller;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -41,8 +43,16 @@ public class CustomerController {
 		if( tcustomer == null)
 			return "Error";
 		else {
-			model.addAttribute("customer", customer);
+			model.addAttribute("customer", customer); 
 			return "Profile";
 		}		
+	}
+	@RequestMapping("/test")
+	public String test(Model model) {
+		int i = customerService.setDateToInt();
+		Date date = customerService.setIntToDate(i);
+		model.addAttribute("dateint", i);
+		model.addAttribute("date", date);
+		return "Test";
 	}
 }
