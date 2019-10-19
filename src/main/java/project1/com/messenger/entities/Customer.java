@@ -2,28 +2,74 @@ package project1.com.messenger.entities;
 
 public class Customer {
 	private int id;
-	private String name;
+	private String firstName;
+	private String lastName;
 	private String address;
+	private String phoneNumber;
+	private String avatar;
+	private String gender;
 	private String email;
 	private String password;
 	private String confirmPassword;
+	private int createAt;
 
 	public Customer() {
 	}
 
-	public Customer(String name, String address) {
-		this.name = name;
-		this.address = address;
-	}
-
-	public Customer(int id, String name, String address) {
-		this.id = id;
-		this.name = name;
-		this.address = address;
-	}
-
 	public int getId() {
 		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+
+	public String getAvatar() {
+		return avatar;
+	}
+
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 
 	public String getEmail() {
@@ -42,26 +88,6 @@ public class Customer {
 		this.password = password;
 	}
 
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
 	public String getConfirmPassword() {
 		return confirmPassword;
 	}
@@ -70,4 +96,12 @@ public class Customer {
 		this.confirmPassword = confirmPassword;
 	}
 
+	public int getCreateAt() {
+		return createAt;
+	}
+
+	public void setCreateAt(int createAt) {
+		this.createAt = createAt;
+	}
+	
 }

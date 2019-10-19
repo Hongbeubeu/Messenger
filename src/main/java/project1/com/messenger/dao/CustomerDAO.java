@@ -1,7 +1,5 @@
 package project1.com.messenger.dao;
 
-//import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -19,8 +17,18 @@ public class CustomerDAO {
 	private JdbcTemplate jdbcTemplate;
 
 	public void save(Customer customer) {
-		String sql = "INSERT INTO user (name, address, email, password) VALUES (?, ?, ?, ?)";
-		jdbcTemplate.update(sql, customer.getName(), customer.getAddress(), customer.getEmail(), customer.getPassword());
+		String sql = "INSERT INTO user "
+					+ "(first_name, last_name, address, phone_number, avatar, gender, email, password, create_at)"
+					+ "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		jdbcTemplate.update(sql,customer.getFirstName(),
+								customer.getLastName(),
+								customer.getAddress(),
+								customer.getPhoneNumber(),
+								customer.getAvatar(),
+								customer.getGender(), 
+								customer.getEmail(), 
+								customer.getPassword(),
+								customer.getCreateAt());
 	}
 	public Customer findByEmail(String email) {
 		String sql = "SELECT * FROM user WHERE email = ?";
