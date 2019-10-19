@@ -48,13 +48,15 @@ public class CustomerService {
 				if(customer.getPassword().equals(customer.getConfirmPassword()))
 					try {
 						customer.setPassword(MD5(customer.getPassword()));
+						customer.setCreateAt(setDateToInt());
 						customerDAO.save(customer);
 						return customer;
 					} catch (NoSuchAlgorithmException e) {
 						return null;
 					}
-				else
-					return null;	
+				else {
+					return null;
+				}
 			} else {
 				return null;
 			}
@@ -68,7 +70,7 @@ public class CustomerService {
         if (matcher.find()) {
             return true;
         } else {
-           return false; 
+           return false;
         }
     }
 	

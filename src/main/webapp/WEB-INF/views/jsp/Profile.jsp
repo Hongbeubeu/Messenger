@@ -8,9 +8,14 @@
 <body>
 	<h1>Profile</h1>	
 	ID: ${customer.id} <br/>
-	Name: ${customer.name} <br/>
-	Email: ${customer.email} <br/>
+	First Name: ${customer.firstName} <br/>
+	Last Name: ${customer.lastName} <br/>
 	Address: ${customer.address} <br/>
+	Phone Number: ${customer.phoneNumber} <br/>
+	Avatar: ${customer.avatar} <br/>
+	Gender: ${customer.gender} <br/>
+	Email: ${customer.email} <br/>
 	Password: ${customer.password} <br/>
+	Create At: ${customer.CreateAt} <br/>
 </body>
 </html>

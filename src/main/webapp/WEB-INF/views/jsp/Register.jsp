@@ -22,16 +22,28 @@
            <c:url value="/processRegister" var="processRegister"/>
            <form:form class="form-signin" action="${processRegister}" method="POST" modelAttribute="customer">
              <div class="form-label-group">
-             	<form:input path="name" id="inputName" type="text" class="form-control" placeholder="Name" required="required"/>
-               	<label for="inputName">Name</label>
+             	<form:input path="firstName" id="inputFirstName" type="text" class="form-control" placeholder="First Name" required="required"/>
+               	<label for="inputFirstName">First Name</label>
              </div>
              <div class="form-label-group">
-             	<form:input path="email" id="inputEmail" type="email" class="form-control" placeholder="Email address" required="required"/>
-               	<label for="inputEmail">Email address</label>
+             	<form:input path="lastName" id="inputLastName" type="text" class="form-control" placeholder="Last Name" required="required"/>
+               	<label for="inputLastName">Last Name</label>
              </div>
              <div class="form-label-group">
              	<form:input path="address" id="inputAddress" type="text" class="form-control" placeholder="Address" required="required"/>
                	<label for="inputAddress">Address</label>
+             </div>
+             <div class="form-label-group">
+             	<form:input path="phoneNumber" id="inputPhoneNumber" type="text" class="form-control" placeholder="Phone Number" required="required"/>
+               	<label for="inputPhoneNumber">Phone Number</label>
+             </div>
+             <div class="form-label-group">
+             	<form:input path="avatar" id="inputAvatar" type="image" class="form-control" placeholder="Address" required="required"/>
+               	<label for="inputAddress">Address</label>
+             </div>
+             <div class="form-label-group">
+             	<form:input path="email" id="inputEmail" type="email" class="form-control" placeholder="Email address" required="required"/>
+               	<label for="inputEmail">Email address</label>
              </div>
              <div class="form-label-group">
                <form:input path="password" id="inputPassword" type="password" class="form-control" placeholder="Password" required="required"/>
