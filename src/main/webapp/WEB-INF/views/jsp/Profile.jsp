@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Profile ${customer.lastName} ${customer.firstName} </title>
+	<title>${customer.lastName} ${customer.firstName} </title>
 	<link href="<c:url value="/resources/css/styleprofile.css" />" rel="stylesheet">
 	<link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
 	<link href="<c:url value="/resources/font/css/all.css" />" rel="stylesheet">
@@ -12,17 +12,29 @@
 	<div class="container emp-profile">
 		<div class="row">
 			<div class="col-md-4">
-		        <div class="profile-img">
-		            <img src="<c:url value="/resources/image/avatar.jpg"/>">
-		            <div class="file btn btn-lg btn-primary">
-		                Change Photo
-		                <input type="file" name="file"/>
-		          	</div>
+			</div>
+			<div class="col-md-4">
+				<div class="profile-img">
+		            <img class= "profile-image" src="<c:url value="/resources/image/avatar.jpg"/>">
 		     	</div>
-		 	</div>
-		   	<div class="col-md-6">
+			</div>
+			<div class="col-md-2">
+		   		<input type="button" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+		   		<input type="button" class="messenger-btn" name="btnAddMore" value="Messenger"/>
+		   		<input type="button" class="logout-btn" name="btnAddMore" value="Logout"/>
+			</div> 
+		 
+		 </div>
+		 
+			 
+		 <div class="row">
+		   	<div class="col-md-4">
+		   	</div>
+		   	<div class="col-md-4">
 		   		<div class="profile-head">
-		        	<h2>${customer.lastName} ${customer.firstName}</h2>
+		        	<h2 align="center">${customer.lastName} ${customer.firstName}</h2>
+		        	<div class="row">
+		        	</div>
 		            <ul class="nav nav-tabs" id="myTab" role="tablist">
 		           		<li class="nav-item">
 		                	<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Profile</a>
@@ -30,11 +42,7 @@
 		          	</ul>
 		          	<div class="tab-content profile-tab" id="myTabContent">
 		       			<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-			           		<div class="row">
-			               		<div class="col-md-6">
-			                    	<h3>${customer.lastName} ${customer.firstName}</h3>
-			                   	</div>
-			              	</div>
+			          
 			                <div class="row">
 			                  	<div class="col-md-6">
 			                      	<label>First Name</label>
@@ -87,11 +95,7 @@
 		       		</div>
 		    	</div>
 			</div>
-		    <div class="col-md-2">
-		   		<input type="button" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
-		   		<input type="button" class="messenger-btn" name="btnAddMore" value="Messenger"/>
-		   		<input type="button" class="logout-btn" name="btnAddMore" value="Logout"/>
-			</div>    
+		      
 		</div>
 	</div>
 </body>

@@ -20,7 +20,7 @@ public class CustomerController {
 	@RequestMapping(value = {"/", "/login"})
 	public String login(Model model) {
 		model.addAttribute("customer", new Customer());
-		return "Login";
+		return "Messenger";
 	}
 	@RequestMapping(value = {"/register"})
 	public String register(Model model) {

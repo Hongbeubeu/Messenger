@@ -8,6 +8,13 @@ body{
     border-radius: 0.5rem;
     background: #fff;
 }
+.profile-image{
+	border-radius: 50%;
+}
+.profile-name{
+	align: right;
+}
+
 .profile-img{
     text-align: center;
 }

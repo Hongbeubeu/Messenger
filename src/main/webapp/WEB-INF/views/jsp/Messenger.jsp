@@ -7,6 +7,9 @@
 	<link href="<c:url value="/resources/css/stylemessenger.css" />" rel="stylesheet">
 	<link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
 	<link href="<c:url value="/resources/font/css/all.css" />" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"></script>
 	<title>Messenger</title>
 </head>
 <body>
