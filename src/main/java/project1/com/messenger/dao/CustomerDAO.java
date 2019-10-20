@@ -37,6 +37,6 @@ public class CustomerDAO {
 			return customer;
 		} catch (EmptyResultDataAccessException e) {
 			return null;
-		  }
+		}
 	}
 }

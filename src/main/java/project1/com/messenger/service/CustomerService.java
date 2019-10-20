@@ -30,10 +30,11 @@ public class CustomerService {
 			return null;
 		else
 			try {
-				if(MD5(customer.getPassword()).equals(tcustomer.getPassword()))
-						return tcustomer;
-					 else
-						return null;
+				if(MD5(customer.getPassword()).equals(tcustomer.getPassword())) {
+					tcustomer.setDate(setIntToDate(tcustomer.getCreateAt()));
+					return tcustomer;
+				}else
+					return null;
 			} catch (NoSuchAlgorithmException e) {
 				return null;
 			}
@@ -49,7 +50,9 @@ public class CustomerService {
 					try {
 						customer.setPassword(MD5(customer.getPassword()));
 						customer.setCreateAt(setDateToInt());
-						customerDAO.save(customer);
+						int date = customer.getCreateAt();
+						customer.setDate(setIntToDate(date));
+						//customerDAO.save(customer);
 						return customer;
 					} catch (NoSuchAlgorithmException e) {
 						return null;

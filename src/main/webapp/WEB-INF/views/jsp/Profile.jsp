@@ -3,19 +3,96 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Profile:${customer.name}</title>
+	<title>Profile ${customer.lastName} ${customer.firstName} </title>
+	<link href="<c:url value="/resources/css/styleprofile.css" />" rel="stylesheet">
+	<link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
+	<link href="<c:url value="/resources/font/css/all.css" />" rel="stylesheet">
 </head>
 <body>
-	<h1>Profile</h1>	
-	ID: ${customer.id} <br/>
-	First Name: ${customer.firstName} <br/>
-	Last Name: ${customer.lastName} <br/>
-	Address: ${customer.address} <br/>
-	Phone Number: ${customer.phoneNumber} <br/>
-	Avatar: ${customer.avatar} <br/>
-	Gender: ${customer.gender} <br/>
-	Email: ${customer.email} <br/>
-	Password: ${customer.password} <br/>
-	Create At: ${customer.CreateAt} <br/>
+	<div class="container emp-profile">
+		<div class="row">
+			<div class="col-md-4">
+		        <div class="profile-img">
+		            <img src="<c:url value="/resources/image/avatar.jpg"/>">
+		            <div class="file btn btn-lg btn-primary">
+		                Change Photo
+		                <input type="file" name="file"/>
+		          	</div>
+		     	</div>
+		 	</div>
+		   	<div class="col-md-6">
+		   		<div class="profile-head">
+		        	<h2>${customer.lastName} ${customer.firstName}</h2>
+		            <ul class="nav nav-tabs" id="myTab" role="tablist">
+		           		<li class="nav-item">
+		                	<a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Profile</a>
+		              	</li>
+		          	</ul>
+		          	<div class="tab-content profile-tab" id="myTabContent">
+		       			<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+			           		<div class="row">
+			               		<div class="col-md-6">
+			                    	<h3>${customer.lastName} ${customer.firstName}</h3>
+			                   	</div>
+			              	</div>
+			                <div class="row">
+			                  	<div class="col-md-6">
+			                      	<label>First Name</label>
+			                   	</div>
+			                    <div class="col-md-6">
+			                    	<p>${customer.firstName}</p>
+			                    </div>
+			               	</div>
+			               	<div class="row">
+			                  	<div class="col-md-6">
+			                      	<label>Last Name</label>
+			                   	</div>
+			                    <div class="col-md-6">
+			                    	<p>${customer.lastName}</p>
+			                    </div>
+			               	</div>
+		                    <div class="row">
+		                        <div class="col-md-6">
+		                            <label>Email</label>
+		                        </div>
+		                        <div class="col-md-6">
+		                            <p>${customer.email}</p>
+		                        </div>
+		                    </div>
+		                    <div class="row">
+		                        <div class="col-md-6">
+		                            <label>Phone</label>
+		                        </div>
+		                        <div class="col-md-6">
+		                            <p>${customer.phoneNumber}</p>
+		                        </div>
+		                    </div>
+		                    <div class="row">
+		                        <div class="col-md-6">
+		                            <label>Gender</label>
+		                        </div>
+		                        <div class="col-md-6">
+		                            <p>${customer.gender}</p>
+		                        </div>
+		                    </div>
+		                    <div class="row">
+		                        <div class="col-md-6">
+		                            <label>Address</label>
+		                        </div>
+		                        <div class="col-md-6">
+		                            <p>${customer.address}</p>
+		                        </div>
+		                    </div>
+			          	</div>
+		       		</div>
+		    	</div>
+			</div>
+		    <div class="col-md-2">
+		   		<input type="button" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
+		   		<input type="button" class="messenger-btn" name="btnAddMore" value="Messenger"/>
+		   		<input type="button" class="logout-btn" name="btnAddMore" value="Logout"/>
+			</div>    
+		</div>
+	</div>
 </body>
 </html>

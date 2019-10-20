@@ -43,7 +43,7 @@ public class CustomerController {
 		if( tcustomer == null)
 			return "Error";
 		else {
-			model.addAttribute("customer", customer); 
+			model.addAttribute("customer", customer);
 			return "Profile";
 		}		
 	}

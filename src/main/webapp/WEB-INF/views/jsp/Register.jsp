@@ -38,12 +38,16 @@
                	<label for="inputPhoneNumber">Phone Number</label>
              </div>
              <div class="form-label-group">
-             	<form:input path="avatar" id="inputAvatar" type="image" class="form-control" placeholder="Address" required="required"/>
-               	<label for="inputAddress">Address</label>
+             	<form:input path="avatar" id="inputAvatar" type="text" class="form-control" placeholder="avatar" required="required"/>
+               	<label for="inputAvatar">Avatar</label>
              </div>
              <div class="form-label-group">
-             	<form:input path="email" id="inputEmail" type="email" class="form-control" placeholder="Email address" required="required"/>
-               	<label for="inputEmail">Email address</label>
+             	<form:input path="gender" id="inputGender" type="text" class="form-control" placeholder="Gender" required="required"/>
+               	<label for="inputGender">Gender</label>
+             </div>
+             <div class="form-label-group">
+             	<form:input path="email" id="inputEmail" type="email" class="form-control" placeholder="Email Address" required="required"/>
+               	<label for="inputEmail">Email Address</label>
              </div>
              <div class="form-label-group">
                <form:input path="password" id="inputPassword" type="password" class="form-control" placeholder="Password" required="required"/>

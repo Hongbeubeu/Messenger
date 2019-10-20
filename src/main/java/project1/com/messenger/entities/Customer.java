@@ -1,5 +1,7 @@
 package project1.com.messenger.entities;
 
+import java.util.Date;
+
 public class Customer {
 	private int id;
 	private String firstName;
@@ -12,8 +14,17 @@ public class Customer {
 	private String password;
 	private String confirmPassword;
 	private int createAt;
+	private Date date;
 
 	public Customer() {
+	}
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
 	}
 
 	public int getId() {
