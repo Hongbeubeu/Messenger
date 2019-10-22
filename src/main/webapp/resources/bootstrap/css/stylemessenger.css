@@ -1,5 +1,5 @@
 body,html{
-		height: 100%;
+		height: 90%;
 		margin: 0;
 		background: #7F7FD5;
        	background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
@@ -11,8 +11,7 @@ body,html{
 		margin-bottom: auto;
 	}
 	.card{
-		height: 500px;
-		border-radius: 15px !important;
+		height: 635px;
 		background-color: rgba(0,0,0,0.4) !important;
 	}
 	.contacts_body{
@@ -23,19 +22,18 @@ body,html{
 	.msg_card_body{
 		overflow-y: auto;
 	}
-	.card-header{
-		border-radius: 15px 15px 0 0 !important;
+	.card-header{		
 		border-bottom: 0 !important;
 	}
  	.card-footer{
-		border-radius: 0 0 15px 15px !important;
+		border-radius: 0 0 50% 50% !important;
 		border-top: 0 !important;
 	}
 	.container{
 		align-content: center;
 	}
 	.search{
-		border-radius: 15px 0 0 15px !important;
+		border-radius: 30px 0 0 30px !important;
 		background-color: rgba(0,0,0,0.3) !important;
 		border:0 !important;
 		color:white !important;
@@ -48,7 +46,7 @@ body,html{
 		background-color: rgba(0,0,0,0.3) !important;
 		border:0 !important;
 		color:white !important;
-		height: 60px !important;
+		height: 40px !important;
 		overflow-y: auto;
 	}
 	.type_msg:focus{
@@ -56,21 +54,21 @@ body,html{
         outline:0px !important;
 	}
 	.attach_btn{
-		border-radius: 15px 0 0 15px !important;
+		border-radius: 50% 0 0 50% !important;
 		background-color: rgba(0,0,0,0.3) !important;
 		border:0 !important;
 		color: white !important;
 		cursor: pointer;
 	}
 	.send_btn{
-		border-radius: 0 15px 15px 0 !important;
+		border-radius: 0 50% 50% 0 !important;
 		background-color: rgba(0,0,0,0.3) !important;
 		border:0 !important;
 		color: white !important;
 		cursor: pointer;
 	}
 	.search_btn{
-		border-radius: 0 15px 15px 0 !important;
+		border-radius: 0 50% 50% 0 !important;
 		background-color: rgba(0,0,0,0.3) !important;
 		border:0 !important;
 		color: white !important;
@@ -193,7 +191,7 @@ body,html{
 		padding: 15px 0;
 		background-color: rgba(0,0,0,0.5);
 		color: white;
-		border-radius: 15px;
+		border-radius: 50%;
 		top: 30px;
 		right: 15px;
 		display: none;
